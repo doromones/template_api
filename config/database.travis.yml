@@ -3,3 +3,4 @@ test:
   encoding: unicode
   database: myapp_test
   username: travis
+  port: <%= ENV['PGPORT'] %>
