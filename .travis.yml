@@ -28,18 +28,15 @@ before_install:
   - gem update --system
   - gem install bundler
 
-#  - sudo apt-get update
-#  - sudo apt-get --yes remove postgresql\*
-#  - sudo apt-get install -y postgresql-11 postgresql-client-11
-#  - sudo cp /etc/postgresql/{9.6,11}/main/pg_hba.conf
-#  - sudo service postgresql restart 11
-#  - psql -c 'CREATE DATABASE myapp_test;' -U postgres
-#  - psql -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' -U postgres
-  - sudo service postgresql stop
-  - sudo service postgresql start 11
-  - sudo service postgresql status 11
+  - sudo apt-get update
+  - sudo apt-get --yes remove postgresql\*
+  - sudo apt-get install -y postgresql-11 postgresql-client-11
+  - sudo cp /etc/postgresql/{9.6,11}/main/pg_hba.conf
+  - sudo service postgresql restart 11
+  - psql -c 'CREATE DATABASE myapp_test;' -U postgres
+  - psql -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' -U postgres
+
   - cp config/database.travis.yml config/database.yml
-  - ls /var/run/postgresql/
 
 script:
 #  - bundle install --jobs=3 --retry=3
