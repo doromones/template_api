@@ -1,0 +1,5 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_test
+  username: travis
