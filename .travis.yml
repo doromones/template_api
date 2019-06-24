@@ -1,7 +1,7 @@
 language: ruby
 rvm:
   - 2.6.3
-  - ruby-head
+#  - ruby-head
 
 services:
   - postgresql
