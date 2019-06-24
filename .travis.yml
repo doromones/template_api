@@ -38,6 +38,7 @@ before_install:
   - sudo service postgresql restart 11
   - sudo service postgresql status 11
   - cp config/database.travis.yml config/database.yml
+  - ls /var/run/postgresql/
 
 script:
 #  - bundle install --jobs=3 --retry=3
