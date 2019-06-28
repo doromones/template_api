@@ -55,3 +55,4 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'config'
 
 gem 'awesome_print'
+gem "pry-rails"
