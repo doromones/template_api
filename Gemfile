@@ -32,6 +32,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'coveralls', require: false
   gem 'dotenv-rails'
+  gem 'bullet'
 end
 
 group :development do
@@ -43,8 +44,6 @@ group :development do
 
   gem "better_errors"
   gem "binding_of_caller"
-
-  gem 'bullet'
 end
 
 
