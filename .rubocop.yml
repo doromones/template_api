@@ -1,2 +1,31 @@
 require:
   - rubocop-rails
+
+Rails:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 30
+  Exclude:
+    - db/migrate/*
+
+Metrics/AbcSize:
+  Enabled: false
+
+AllCops:
+  DefaultFormatter: simple
+  Exclude:
+    - config/initializers/secret_token.rb
+    - config/initializers/devise.rb
+    - bin/*
+    - '**/vendor/**/*'
+    - '**/vendor/**/.*'
