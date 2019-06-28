@@ -33,6 +33,7 @@ group :development, :test do
   gem 'coveralls', require: false
   gem 'dotenv-rails'
   gem 'bullet'
+  gem 'factory_bot_rails'
 end
 
 group :development do
