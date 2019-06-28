@@ -31,6 +31,7 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'rspec-rails', '~> 3.8'
   gem 'coveralls', require: false
+  gem 'dotenv-rails'
 end
 
 group :development do
