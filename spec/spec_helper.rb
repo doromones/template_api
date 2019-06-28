@@ -16,8 +16,26 @@
 #
 require "rspec/json_expectations"
 
+require 'simplecov'
 require 'coveralls'
-Coveralls.wear!('rails')
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
+  [
+    SimpleCov::Formatter::HTMLFormatter,
+    Coveralls::SimpleCov::Formatter
+  ]
+)
+
+SimpleCov.start :rails do
+  add_group "Models", "app/models"
+  add_group "Controllers", "app/controllers"
+
+  add_filter 'app/jobs/application_job'
+  add_filter 'app/channels/application_cable/channel.rb'
+  add_filter 'app/channels/application_cable/connection.rb'
+  add_filter 'app/mailers/application_mailer.rb'
+  add_filter 'app/models/application_record.rb'
+end
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -50,8 +68,8 @@ RSpec.configure do |config|
   # triggering implicit auto-inclusion in groups with matching metadata.
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
-# The settings below are suggested to provide a good initial experience
-# with RSpec, but feel free to customize to your heart's content.
+  # The settings below are suggested to provide a good initial experience
+  # with RSpec, but feel free to customize to your heart's content.
 =begin
   # This allows you to limit a spec run to individual examples or groups
   # you care about by tagging them with `:focus` metadata. When nothing
