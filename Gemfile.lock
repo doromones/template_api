@@ -58,6 +58,7 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.4)
     addressable (2.4.0)
     ast (2.4.0)
+    awesome_print (1.8.0)
     backports (3.15.0)
     bcrypt (3.1.13)
     bootsnap (1.4.4)
@@ -297,6 +298,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bootsnap (>= 1.4.2)
   byebug
   config

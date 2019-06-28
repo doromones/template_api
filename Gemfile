@@ -53,3 +53,5 @@ gem 'omniauth'
 gem 'rack-cors', require: 'rack/cors'
 
 gem 'config'
+
+gem 'awesome_print'
