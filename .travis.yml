@@ -42,4 +42,5 @@ bundler_args: --jobs 3 --retry 3  --without production
 
 script:
   - bundle exec rake db:setup
+  - bundle exec rubocop
   - bundle exec rspec
