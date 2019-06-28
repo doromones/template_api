@@ -3,6 +3,9 @@ rvm:
   - 2.6.3
 #  - ruby-head
 
+notifications:
+  email: false
+
 services:
   - postgresql
 
