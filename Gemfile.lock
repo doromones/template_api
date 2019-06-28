@@ -61,6 +61,12 @@ GEM
     awesome_print (1.8.0)
     backports (3.15.0)
     bcrypt (3.1.13)
+    better_errors (2.5.1)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
+    binding_of_caller (0.8.0)
+      debug_inspector (>= 0.0.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
     builder (3.2.3)
@@ -78,6 +84,7 @@ GEM
       thor (>= 0.19.4, < 2.0)
       tins (~> 1.6)
     crass (1.0.4)
+    debug_inspector (0.0.3)
     deep_merge (1.2.1)
     devise (4.6.2)
       bcrypt (~> 3.0)
@@ -305,6 +312,8 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  better_errors
+  binding_of_caller
   bootsnap (>= 1.4.2)
   byebug
   config
